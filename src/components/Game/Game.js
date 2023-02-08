@@ -5,6 +5,7 @@ import { WORDS } from "../../data";
 import { checkGuess } from "../../game-helpers";
 import GuessInput from "../GuessInput";
 import GuessResults from "../GuessResults";
+import Keyboard from "../Keyboard";
 
 function Game() {
     const [answer, setAnswer] = useState(() => {
@@ -36,6 +37,7 @@ function Game() {
     return (
         <>
             <GuessResults results={results} />
+            <Keyboard results={results} />
             <GuessInput
                 handleGuess={handleGuess}
                 results={results}
